@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Halaman Cinta Angkasa 🚀</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Latar Belakang Angkasa Beranimasi */
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background: linear-gradient(135deg, #050510, #101030, #1a1040, #081020);
+            background-size: 400% 400%;
+            animation: latarAngkasa 25s ease infinite;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        @keyframes latarAngkasa {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Efek Bintang Berkedip */
+        .bintang {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: berkedip 3s infinite;
+        }
+        @keyframes berkedip {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Wadah Utama */
+        .wadah {
+            position: relative;
+            z-index: 10;
+            background: rgba(255,255,255,0.07);
+            backdrop-filter: blur(12px);
+            padding: 35px 25px;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.18);
+            width: 100%;
+            max-width: 480px;
+            min-height: 380px;
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #ffd700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+
+        .nomor-halaman {
+            font-size: 14px;
+            color: #a5b4fc;
+            margin-bottom: 15px;
+        }
+
+        .kata-bucin {
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            min-height: 100px;
+            transition: all 0.4s ease;
+            color: #e0e7ff;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 12px;
+        }
+        .kata-bucin:hover {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .petunjuk {
+            font-size: 13px;
+            color: #93c5fd;
+            margin-bottom: 25px;
+            animation: kedipLambat 2.5s infinite;
+        }
+        @keyframes kedipLambat {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* Tombol Navigasi */
+        .tombol-grup {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tombol {
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #8b5cf6, #ec4899);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+            font-size: 15px;
+        }
+        .tombol:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 22px rgba(236, 72, 153, 0.5);
+        }
+        .tombol:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .tombol.akhir {
+            background: linear-gradient(45deg, #10b981, #3b82f6);
+        }
+
+        /* === ANIMASI PINDAH HALAMAN === */
+        .halaman {
+            display: none;
+            width: 100%;
+        }
+        .halaman.aktif {
+            display: block;
+            animation: masukHalaman 0.7s ease forwards;
+        }
+
+        /* Animasi Berbeda Setiap Pindah */
+        @keyframes masukHalaman {
+            0% { opacity: 0; transform: translateY(30px) scale(0.9); filter: blur(8px); }
+            100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        }
+
+        .keluar {
+            animation: keluarHalaman 0.5s ease forwards !important;
+        }
+        @keyframes keluarHalaman {
+            0% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(-30px) scale(0.9); filter: blur(8px); }
+        }
+
+        /* Efek Pergantian Kata */
+        .fade-keluar { opacity: 0; transform: translateY(-10px); }
+        .fade-masuk { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <!-- Bintang Otomatis -->
+    <script>
+        for(let i=0; i<200; i++){
+            const bintang = document.createElement('div');
+            bintang.classList.add('bintang');
+            bintang.style.left = Math.random()*100 + '%';
+            bintang.style.top = Math.random()*100 + '%';
+            bintang.style.width = Math.random()*3 + 0.8 + 'px';
+            bintang.style.height = bintang.style.width;
+            bintang.style.animationDelay = Math.random()*3 + 's';
+            document.body.appendChild(bintang);
+        }
+    </script>
+
+    <div class="wadah">
+        <!-- === ISI 20 HALAMAN === -->
+        <div id="h1" class="halaman aktif">
+            <div class="nomor-halaman">Halaman 1 dari 20</div>
+            <h1>✨ Bintang Pertama ✨</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(1)">
+                Di antara milyaran bintang di angkasa,<br>
+                cuma satu yang paling bersinar...<br>
+                Itu adalah kamu 💖
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" disabled>← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(2)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h2" class="halaman">
+            <div class="nomor-halaman">Halaman 2 dari 20</div>
+            <h1>🌙 Cahaya Bulan 🌙</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(2)">
+                Mungkin aku nggak bisa terbang ke bulan,<br>
+                tapi aku janji akan selalu ada<br>
+                di samping kamu selamanya ✨
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(1)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(3)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h3" class="halaman">
+            <div class="nomor-halaman">Halaman 3 dari 20</div>
+            <h1>🌌 Luas Semesta 🌌</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(3)">
+                Angkasa itu luas banget,<br>
+                tapi cintaku ke kamu<br>
+                lebih luas dari semesta ini 💫
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(2)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(4)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h4" class="halaman">
+            <div class="nomor-halaman">Halaman 4 dari 20</div>
+            <h1>💫 Bintang Jatuh 💫</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(4)">
+                Bintang boleh jatuh dari langit,<br>
+                tapi cintaku ke kamu<br>
+                nggak akan pernah jatuh ke orang lain 💞
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(3)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(5)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h5" class="halaman">
+            <div class="nomor-halaman">Halaman 5 dari 20</div>
+            <h1>☀️ Matahari ☀️</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(5)">
+                Kalau bumi butuh matahari untuk hidup,<br>
+                aku cuma butuh kamu untuk tersenyum.<br>
+                Sejauh apapun galaksi membentang,<br>
+                cintaku nggak akan pernah pudar 💛
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(4)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(6)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h6" class="halaman">
+            <div class="nomor-halaman">Halaman 6 dari 20</div>
+            <h1>🪐 Gravitasi 🪐</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(6)">
+                Kamu itu kayak gravitasi...<br>
+                gimana pun aku berusaha pergi,<br>
+                tetap aja ditarik balik ke kamu 💙
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(5)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(7)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h7" class="halaman">
+            <div class="nomor-halaman">Halaman 7 dari 20</div>
+            <h1>🚀 Perjalanan 🚀</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(7)">
+                Satu semesta mungkin nggak cukup,<br>
+                buat gambarin betapa berartinya<br>
+                kamu di hidupku 🚀
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(6)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(8)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h8" class="halaman">
+            <div class="nomor-halaman">Halaman 8 dari 20</div>
+            <h1>🌙 Abadi 🌙</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(8)">
+                Matahari bisa terbenam,<br>
+                bulan bisa berganti fase,<br>
+                tapi sayangku ke kamu<br>
+                tetap sama selamanya 💜
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(7)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(9)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h9" class="halaman">
+            <div class="nomor-halaman">Halaman 9 dari 20</div>
+            <h1>✨ Harapan ✨</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(9)">
+                Kalau aku bisa pegang bintang,<br>
+                bakal aku kasih semuanya ke kamu.<br>
+                Karena kamu lebih berharga<br>
+                dari seluruh isi langit malam 🌟
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(8)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(10)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h10" class="halaman">
+            <div class="nomor-halaman">Halaman 10 dari 20</div>
+            <h1>🌠 Keinginan 🌠</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(10)">
+                Setiap lihat bintang jatuh,<br>
+                cuma satu hal yang aku minta...<br>
+                biar kita selalu bersama,<br>
+                sampai ujung semesta 💖
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(9)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(11)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h11" class="halaman">
+            <div class="nomor-halaman">Halaman 11 dari 20</div>
+            <h1>🪐 Planet 🪐</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(11)">
+                Ada milyaran planet di galaksi,<br>
+                tapi cuma satu tempat aku ingin pulang...<br>
+                Yaitu di hati kamu 🏡💓
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(10)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(12)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h12" class="halaman">
+            <div class="nomor-halaman">Halaman 12 dari 20</div>
+            <h1>💫 Jarak 💫</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(12)">
+                Sejauh apapun jarak memisahkan,<br>
+                sebanyak apapun bintang di langit,<br>
+                hati aku tetap cuma punya kamu<br>
+                selamanya 💞
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(11)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(13)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h13" class="halaman">
+            <div class="nomor-halaman">Halaman 13 dari 20</div>
+            <h1>🌌 Galaksi 🌌</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(13)">
+                Kalau cinta itu cahaya,<br>
+                aku rela jadi matahari kamu,<br>
+                biar kamu selalu terang,<br>
+                dimanapun kamu berada ✨
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(12)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(14)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h14" class="halaman">
+            <div class="nomor-halaman">Halaman 14 dari 20</div>
+            <h1>✨ Unik ✨</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(14)">
+                Kayak sidik jari bintang di langit,<br>
+                nggak ada yang sama persis kayak kamu.<br>
+                Kamu satu-satunya yang paling istimewa<br>
+                di hidupku 💖
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(13)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(15)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h15" class="halaman">
+            <div class="nomor-halaman">Halaman 15 dari 20</div>
+            <h1>🌙 Tenang 🌙</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(15)">
+                Saat dunia lagi berisik,<br>
+                pikiran aku selalu tenang...<br>
+                karena yang aku ingat cuma<br>
+                senyum kamu 💙
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(14)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(16)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h16" class="halaman">
+            <div class="nomor-halaman">Halaman 16 dari 20</div>
+            <h1>🚀 Masa Depan 🚀</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(16)">
+                Masa depan itu penuh misteri,<br>
+                kayak kedalaman angkasa raya.<br>
+                Tapi satu hal yang aku yakin:<br>
+                aku mau jalanin semuanya sama kamu 💍
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(15)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(17)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h17" class="halaman">
+            <div class="nomor-halaman">Halaman 17 dari 20</div>
+            <h1>💫 Satu 💫</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(17)">
+                Dua bintang bisa bersanding,<br>
+                dua galaksi bisa menyatu.<br>
+                Dan aku cuma mau menyatu<br>
+                sama kamu selamanya 💞
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(16)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(18)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h18" class="halaman">
+            <div class="nomor-halaman">Halaman 18 dari 20</div>
+            <h1>✨ Cahaya ✨</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(18)">
+                Kamu adalah cahaya di kegelapan,<br>
+                kompas saat aku tersesat,<br>
+                dan satu-satunya tempat<br>
+                aku ingin pulang terus 🛸💖
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(17)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(19)">Selanjutnya →</button>
+            </div>
+        </div>
+
+        <div id="h19" class="halaman">
+            <div class="nomor-halaman">Halaman 19 dari 20</div>
+            <h1>🌌 Tanpa Batas 🌌</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(19)">
+                Cintaku ke kamu nggak punya batas,<br>
+                seluas angkasa yang nggak berujung.<br>
+                Nggak ada yang bisa mengukur<br>
+                betapa sayangnya aku ke kamu 💓
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(18)">← Sebelumnya</button>
+                <button class="tombol" onclick="gantiHalaman(20)">Halaman Terakhir →</button>
+            </div>
+        </div>
+
+        <div id="h20" class="halaman">
+            <div class="nomor-halaman">Halaman 20 dari 20</div>
+            <h1>💖 Penutup 💖</h1>
+            <p class="petunjuk">👉 Klik tulisan untuk ganti kata</p>
+            <div class="kata-bucin" onclick="gantiKata(20)">
+                Ini halaman terakhir,<br>
+                tapi cerita kita baru dimulai.<br>
+                Terima kasih sudah jadi<br>
+                bintang paling indah di hidupku ✨💖
+            </div>
+            <div class="tombol-grup">
+                <button class="tombol" onclick="gantiHalaman(19)">← Kembali</button>
+                <button class="tombol akhir" onclick="gantiHalaman(1)">🔄 Ulangi Dari Awal</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // === DAFTAR KATA TAMBAHAN SETIAP HALAMAN ===
+        const daftarKata = {
+            1: [
+                "Di antara milyaran bintang di angkasa,<br>cuma satu yang paling bersinar...<br>Itu adalah kamu 💖",
+                 "Langit malam penuh cahaya,<br>tapi cuma senyum kamu yang bikin<br>hatiku terang benderang ✨",
+                 "Kalau bintang itu harapan,<br>maka kamu adalah harapan<br>terbesar yang aku punya 💫"
+             ],
+             2: [
+                 "Mungkin aku nggak bisa terbang ke bulan,<br>tapi aku janji akan selalu ada<br>di samping kamu selamanya ✨",
+                 "Bulan berputar mengelilingi bumi,<br>dan aku berputar mengelilingi kamu<br>selamanya 🪐💙",
+                 "Cahaya bulan bisa redup,<br>tapi sayangku ke kamu<br>nggak akan pernah padam 🌙💖"
+             ],
+             3: [
+                 "Angkasa itu luas banget,<br>tapi cintaku ke kamu<br>lebih luas dari semesta ini 💫",
+                 "Jarak antarbintang jutaan tahun cahaya,<br>tapi nggak ada yang bisa memisahkan<br>hati aku sama kamu 💞",
+                 "Semesta masih terus mengembang,<br>dan cintaku ke kamu juga terus<br>mengembang tanpa batas 💖"
+             ],
+             4: [
+                 "Bintang boleh jatuh dari langit,<br>tapi cintaku ke kamu<br>nggak akan pernah jatuh ke orang lain 💞",
+                 "Setiap bintang jatuh berharap sama,<br>aku cuma berharap kita bisa<br>sama-sama selamanya 🌠",
+                 "Bintang jatuh hilang ditelan malam,<br>tapi kenangan sama kamu<br>tetap abadi di hati ✨"
+             ],
+             5: [
+                 "Kalau bumi butuh matahari untuk hidup,<br>aku cuma butuh kamu untuk tersenyum.<br>Sejauh apapun galaksi membentang,<br>cintaku nggak akan pernah pudar 💛",
+                 "Matahari terbit tiap pagi,<br>tapi cinta aku ke kamu<br>ada tiap detik tanpa henti ☀️",
+                 "Kamu adalah matahari aku,<br>yang bikin hidupku berwarna<br>dan penuh kehangatan 💛"
+             ],
+             6: [
+                 "Kamu itu kayak gravitasi...<br>gimana pun aku berusaha pergi,<br>tetap aja ditarik balik ke kamu 💙",
+                 "Nggak peduli seberapa jauh aku melangkah,<br>hatiku selalu punya arah ke kamu...<br>seperti bumi mengarah ke matahari 🧭",
+                 "Gravitasi bikin benda jatuh,<br>tapi kamu bikin aku jatuh cinta<br>berulang kali setiap hari 💖"
+             ],
+             7: [
+                 "Satu semesta mungkin nggak cukup,<br>buat gambarin betapa berartinya<br>kamu di hidupku 🚀",
+                 "Kalau aku punya roket,<br>bakal aku ajak kamu keliling galaksi<br>dan kasih semua bintang yang ada 🌟",
+                 "Perjalanan ke ujung semesta lama banget,<br>tapi aku rela jalanin semuanya<br>asalkan sama kamu 🚀💖"
+             ],
+             8: [
+                 "Matahari bisa terbenam,<br>bulan bisa berganti fase,<br>tapi sayangku ke kamu<br>tetap sama selamanya 💜",
+                 "Waktu terus berjalan,<br>bintang terus bergerak,<br>tapi perasaanku ke kamu<br>nggak akan pernah berubah ⏳💖",
+                 "Siklus alam terus berganti,<br>tapi satu hal yang pasti:<br>aku akan selalu sayang kamu 💜"
+             ],
+             9: [
+                 "Kalau aku bisa pegang bintang,<br>bakal aku kasih semuanya ke kamu.<br>Karena kamu lebih berharga<br>dari seluruh isi langit malam 🌟",
+                 "Bintang itu mahal harganya,<br>tapi kasih sayang aku ke kamu<br>nggak ada harganya... tak terhingga 💖",
+                 "Di langit ada ribuan bintang,<br>tapi cuma satu yang paling berarti:<br>kamu 💫"
+             ],
+             10: [
+                 "Setiap lihat bintang jatuh,<br>cuma satu hal yang aku minta...<br>biar kita selalu bersama,<br>sampai ujung semesta 💖",
+                 "Bintang jatuh cuma sebentar,<br>tapi harapan aku ke kamu<br>bertahan seumur hidup 🌠",
+                 "Aku nggak butuh ribuan keinginan,<br>cuma satu saja: selalu ada<br>di samping kamu 💞"
+             ],
+             11: [
+                 "Ada milyaran planet di galaksi,<br>tapi cuma satu tempat aku ingin pulang...<br>Yaitu di hati kamu 🏡💓",
+                 "Mungkin planet lain indah,<br>tapi nggak ada yang senyaman<br>berada di dekat kamu 🪐💖",
+                 "Aku rela jadi satelit kamu,<br>berputar terus mengelilingi kamu<br>tanpa pernah menjauh 🌙💙"
+             ],
+             12: [
+                 "Sejauh apapun jarak memisahkan,<br>sebanyak apapun bintang di langit,<br>hati aku tetap cuma punya kamu<br>selamanya 💞",
+                 "Jarak cuma memisahkan raga,<br>bukan memisahkan hati...<br>aku selalu ada buat kamu 💖",
+                 "Bahkan kalau kita terpisah ujung semesta,<br>cintaku tetap akan menemukan kamu<br>seperti cahaya menembus gelap ✨"
+             ],
+             13: [
+                 "Kalau cinta itu cahaya,<br>aku rela jadi matahari kamu,<br>biar kamu selalu terang,<br>dimanapun kamu berada ✨",
+                 "Di kegelapan angkasa yang sunyi,<br>senyum kamu adalah satu-satunya<br>cahaya yang aku cari 💡💖",
+                 "Cahaya bintang butuh waktu ribuan tahun<br>sampai sampai ke bumi...<br>tapi cintaku langsung sampai ke hati kamu 💫"
+             ],
+             14: [
+                 "Kayak sidik jari bintang di langit,<br>nggak ada yang sama persis kayak kamu.<br>Kamu satu-satunya yang paling istimewa<br>di hidupku 💖",
+                 "Tuhan menciptakan milyaran makhluk,<br>tapi cuma kamu yang diciptakan<br>sempurna buat melengkapi hidupku ✨",
+                 "Kamu unik, kamu spesial,<br>dan kamu adalah satu-satunya<br>yang aku cintai sepenuh hati 💞"
+             ],
+             15: [
+                 "Saat dunia lagi berisik,<br>pikiran aku selalu tenang...<br>karena yang aku ingat cuma<br>senyum kamu 💙",
+                 "Di tengah hiruk pikuk semesta,<br>kamu adalah tempat paling damai<br>untuk aku bersandar 🌌💖",
+                 "Hati aku tenang setiap kali<br>ingat bahwa aku punya kamu...<br>terima kasih sudah ada 💙"
+             ],
+             16: [
+                 "Masa depan itu penuh misteri,<br>kayak kedalaman angkasa raya.<br>Tapi satu hal yang aku yakin:<br>aku mau jalanin semuanya sama kamu 💍",
+                 "Masa depan mungkin nggak pasti,<br>tapi satu hal yang pasti:<br>aku akan selalu ada buat kamu 🚀💖",
+                 "Aku nggak takut menghadapi apapun,<br>asalkan tangan kamu yang selalu<br>menggenggam tanganku 🤝💞"
+             ],
+             17: [
+                 "Dua bintang bisa bersanding,<br>dua galaksi bisa menyatu.<br>Dan aku cuma mau menyatu<br>sama kamu selamanya 💞",
+                 "Sama kayak bintang yang saling tarik-menarik,<br>aku dan kamu memang ditakdirkan<br>untuk selalu bersama 💫",
+                 "Bahkan kalau semesta runtuh sekalipun,<br>aku akan tetap memilih kamu...<br>cintaku abadi melebihi waktu 💖"
+             ],
+             18: [
+                 "Kamu adalah cahaya di kegelapan,<br>kompas saat aku tersesat,<br>dan satu-satunya tempat<br>aku ingin pulang terus 🛸💖",
+                 "Tanpa kamu aku kayak pesawat luar angkasa<br>yang kehilangan arah...<br>kamu adalah navigasi hatiku 🧭💙",
+                 "Kamu adalah rumah aku,<br>dimanapun kita berada...<br>selama sama kamu, aku merasa di rumah 🏡💖"
+             ],
+             19: [
+                 "Cintaku ke kamu nggak punya batas,<br>seluas angkasa yang nggak berujung.<br>Nggak ada yang bisa mengukur<br>betapa sayangnya aku ke kamu 💓",
+                 "Para ilmuwan belum tahu batas semesta,<br>dan aku juga belum tahu batas<br>seberapa besar sayang aku ke kamu 💖",
+                 "Bahkan kalau semesta sudah berhenti mengembang,<br>cintaku ke kamu masih akan terus<br>mengembang semakin besar 💞"
+             ],
+             20: [
+                 "Ini halaman terakhir,<br>tapi cerita kita baru dimulai.<br>Terima kasih sudah jadi<br>bintang paling indah di hidupku ✨💖",
+                 "20 halaman ini nggak cukup<br>buat gambarin isi hatiku...<br>karena cintaku ke kamu nggak ada habisnya 💫",
+                 "Terima kasih sudah membaca sampai sini...<br>dan terima kasih sudah menjadi<br>bagian paling indah di semesta aku 💖✨"
+             ]
+         };
+         let urutanKata = {};
+         for(let i=1; i<=20; i++) urutanKata[i] = 0;
+         // Ganti Halaman dengan Animasi
+         function gantiHalaman(tujuan) {
+             const halamanAktif = document.querySelector('.halaman.aktif');
+             halamanAktif.classList.add('keluar');
+             setTimeout(() => {
+                 halamanAktif.classList.remove('aktif', 'keluar');
+                 document.getElementById(`h${tujuan}`).classList.add('aktif');
+                 window.scrollTo({top:0, behavior:'smooth'});
+             }, 450);
+         }
+         // Ganti Kata Saat Diklik
+         function gantiKata(halaman) {
+             const elemen = event.target;
+             const list = daftarKata[halaman];
+             
+             elemen.classList.add('fade-keluar');
+             setTimeout(() => {
+                 urutanKata[halaman] = (urutanKata[halaman] + 1) % list.length;
+                 elemen.innerHTML = list[urutanKata[halaman]];
+                 elemen.classList.remove('fade-keluar');
+                 elemen.classList.add('fade-masuk');
+                 setTimeout(() => elemen.classList.remove('fade-masuk'), 400);
+             }, 350);
+         }
+     </script>
+ </body>
+ </html>
